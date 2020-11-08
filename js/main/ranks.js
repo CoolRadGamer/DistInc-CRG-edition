@@ -194,7 +194,7 @@ function getRankFP() {
 }
 
 function getRankBaseCost() {
-	let bc = new ExpantaNum(10)
+	let bc = new ExpantaNum(1e-10)
 	if (modeActive("extreme") && player.rank < 3) bc = bc.times(2)
 	if (modeActive("easy") && player.rank < 3) bc = bc.div(3)
 	if (tmp.inf) if (tmp.inf.stadium.active("spaceon", 5) || tmp.inf.stadium.active("solaris", 6)) bc = bc.times(10)
@@ -203,23 +203,23 @@ function getRankBaseCost() {
 }
 
 function rank2Eff() {
-	return ExpantaNum.pow(1.1, player.rank);
+	return ExpantaNum.pow(1.3, player.rank);
 }
 
 function rank4Eff() {
-	return ExpantaNum.pow(3, player.tier);
+	return ExpantaNum.pow(4, player.tier);
 }
 
 function rank5Eff() {
-	return ExpantaNum.pow(1.975, player.rank);
+	return ExpantaNum.pow(2, player.rank);
 }
 
 function rank8Eff() {
-	return ExpantaNum.pow(1.1, player.rank);
+	return ExpantaNum.pow(1.3, player.rank);
 }
 
 function rank14Eff() {
-	return ExpantaNum.pow(player.rf.plus(1), 1.6);
+	return ExpantaNum.pow(player.rf.plus(1), 1.7);
 }
 
 function rank40Eff() {
@@ -229,9 +229,9 @@ function rank40Eff() {
 }
 
 function rank55Eff() {
-	return ExpantaNum.pow(2, player.rank)
+	return ExpantaNum.pow(3, player.rank)
 }
 
 function rank111Eff() {
-	return ExpantaNum.pow(2, player.rank)
+	return ExpantaNum.pow(3, player.rank)
 }
