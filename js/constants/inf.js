@@ -58,36 +58,36 @@ const INF_UPGS = {
 		},
 	},
 	costs: {
-		"1;1": new ExpantaNum(40),
-		"1;2": new ExpantaNum(200),
-		"1;3": new ExpantaNum(3.5e3),
-		"1;4": new ExpantaNum(1e4),
-		"1;5": new ExpantaNum(1e7),
-		"1;6": new ExpantaNum(2.5e10),
-		"1;7": new ExpantaNum(5e19),
-		"1;8": new ExpantaNum(2e23),
-		"1;9": new ExpantaNum(1e35),
-		"1;10": new ExpantaNum(1e75),
-		"2;1": new ExpantaNum(200),
-		"2;2": new ExpantaNum(400),
-		"2;3": new ExpantaNum(8e3),
-		"2;4": new ExpantaNum(5e4),
-		"2;5": new ExpantaNum(1e8),
-		"2;6": new ExpantaNum(5e10),
-		"2;7": new ExpantaNum(1e21),
-		"2;8": new ExpantaNum(2.5e23),
-		"2;9": new ExpantaNum(1.2e35),
-		"2;10": new ExpantaNum(1e115),
-		"3;1": new ExpantaNum(1e3),
-		"3;2": new ExpantaNum(8e3),
-		"3;3": new ExpantaNum(5e4),
-		"3;4": new ExpantaNum(1e5),
-		"3;5": new ExpantaNum(2.5e8),
-		"3;6": new ExpantaNum(1e11),
-		"3;7": new ExpantaNum(4e21),
-		"3;8": new ExpantaNum(4e23),
-		"3;9": new ExpantaNum(1e39),
-		"3;10": new ExpantaNum(1.2e120),
+		"1;1": new ExpantaNum(4),
+		"1;2": new ExpantaNum(20),
+		"1;3": new ExpantaNum(3.5e2),
+		"1;4": new ExpantaNum(1e3),
+		"1;5": new ExpantaNum(1e6),
+		"1;6": new ExpantaNum(2.5e9),
+		"1;7": new ExpantaNum(5e18),
+		"1;8": new ExpantaNum(2e22),
+		"1;9": new ExpantaNum(1e34),
+		"1;10": new ExpantaNum(1e74),
+		"2;1": new ExpantaNum(20),
+		"2;2": new ExpantaNum(40),
+		"2;3": new ExpantaNum(8e2),
+		"2;4": new ExpantaNum(5e3),
+		"2;5": new ExpantaNum(1e7),
+		"2;6": new ExpantaNum(5e9),
+		"2;7": new ExpantaNum(1e20),
+		"2;8": new ExpantaNum(2.5e22),
+		"2;9": new ExpantaNum(1.2e34),
+		"2;10": new ExpantaNum(1e114),
+		"3;1": new ExpantaNum(1e2),
+		"3;2": new ExpantaNum(8e2),
+		"3;3": new ExpantaNum(5e3),
+		"3;4": new ExpantaNum(1e4),
+		"3;5": new ExpantaNum(2.5e7),
+		"3;6": new ExpantaNum(1e10),
+		"3;7": new ExpantaNum(4e20),
+		"3;8": new ExpantaNum(4e22),
+		"3;9": new ExpantaNum(1e38),
+		"3;10": new ExpantaNum(1.2e119),
 		"4;1": new ExpantaNum(1e4),
 		"4;2": new ExpantaNum(5e4),
 		"4;3": new ExpantaNum(1e5),
@@ -383,7 +383,7 @@ const INF_UPGS = {
 	effects: {
 		"1;1": function () {
 			if (nerfActive("noInf1;1") || extremeStadiumActive("spectra", 5)) return new ExpantaNum(1);
-			let total = player.rank.plus(player.tier.pow(2));
+			let total = player.rank.plus(player.tier.pow(4));
 			let exp = new ExpantaNum(3);
 			if (player.modes.includes("extreme")) exp = exp.times(Math.pow(player.inf.upgrades.length+1, 0.54))
 			if (tmp.inf) if (tmp.inf.stadium.completed("spaceon")) exp = exp.times(STADIUM_REWARDS.effects.spaceon());
@@ -408,13 +408,13 @@ const INF_UPGS = {
 			return ret;
 		},
 		"1;10": function() {
-			let ret = player.inf.knowledge.plus(1).times(10).slog(10).div(10)
+			let ret = player.inf.knowledge.plus(1).times(10).slog(9).div(10)
 			if (ret.gte(0.9)) ret = ret.div(10).plus(0.89)
 			if (ret.gte(0.975)) ret = new ExpantaNum(0.975)
 			return ret
 		},
 		"2;1": function () {
-			let ret = player.inf.knowledge.plus(1).slog(10).sqrt();
+			let ret = player.inf.knowledge.plus(1).slog(10);
 			if (ret.gte(1.1)) ret = ret.pow(0.001).times(ExpantaNum.pow(1.1, 0.999));
 			return ret.max(1);
 		},
@@ -520,7 +520,7 @@ const INF_UPGS = {
 			return {pth: ret, hb: ret2}
 		},
 		"6;5": function () {
-			let ret = player.inf.knowledge.plus(1).log10().plus(1).logBase(14).pow(3).plus(1);
+			let ret = player.inf.knowledge.plus(1).log10().plus(1).logBase(14).pow(5).plus(1);
 			return ret;
 		},
 		"6;6": function () {
@@ -531,7 +531,7 @@ const INF_UPGS = {
 			return ret;
 		},
 		"7;1": function () {
-			let base = new ExpantaNum(0.2)
+			let base = new ExpantaNum(1)
 			if (modeActive("extreme")) base = new ExpantaNum(0.08)
 			let ret = ExpantaNum.mul(base, player.inf.stadium.completions.length+(player.extremeStad?player.extremeStad.length:0)).add(1);
 			return ret;
