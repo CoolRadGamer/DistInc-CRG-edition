@@ -1,5 +1,5 @@
 function calcAcceleration(){
-	tmp.acc = new ExpantaNum(0.1);
+	tmp.acc = new ExpantaNum(1);
 	if (modeActive("hard")) tmp.acc = tmp.acc.div(3);
 	if (modeActive("easy")) tmp.acc = tmp.acc.times(2);
 	if (player.rank.gt(2)) tmp.acc = tmp.acc.times(rank2Eff());
@@ -44,7 +44,7 @@ function calcAcceleration(){
 }
 
 function calcMaxVelocity(){
-	tmp.maxVel = new ExpantaNum(1);
+	tmp.maxVel = new ExpantaNum(10);
 	if (player.rank.gt(1)) tmp.maxVel = tmp.maxVel.plus(1);
 	if (modeActive("hard")) tmp.maxVel = tmp.maxVel.div(2);
 	if (modeActive("easy")) tmp.maxVel = tmp.maxVel.times(3);
