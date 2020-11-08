@@ -17,7 +17,7 @@ function getFuelEff() {
 		.plus(1)
 		.logBase(2)
 		.plus(1)
-		.pow(0.05);
+		.pow(0.3);
 	if (modeActive("hard")) eff = eff.sub(0.02);
 	if (modeActive('easy')) eff = eff.plus(0.012);
 	if (tmp.inf) if (tmp.inf.stadium.completed("infinity")) eff = eff.sub(1).times(2).add(1);
