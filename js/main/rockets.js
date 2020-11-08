@@ -7,7 +7,7 @@ function getRocketSoftcapStart() {
 }
 
 function getRocketEffectSoftcapStart() {
-	let sc = new ExpantaNum(5);
+	let sc = new ExpantaNum(50);
 	if (modeActive("hard")) sc = sc.sub(0.5);
 	if (modeActive("easy")) sc = sc.plus(0.5);
 	if (tmp.pathogens && player.pathogens.unl) sc = sc.plus(tmp.pathogens[8].eff());
@@ -31,7 +31,7 @@ function getRocketEffect() {
 }
 
 function getRocketGainMult() {
-	let mult = new ExpantaNum(1);
+	let mult = new ExpantaNum(10);
 	if (tmp.ach[34].has) mult = mult.times(1.1);
 	if (tmp.ach[15].has) mult = mult.times(1.05);
 	if (tmp.ach[26].has) mult = mult.times(1.1);
@@ -84,6 +84,6 @@ function updateTempRockets() {
 	if (modeActive("extreme") && tmp.fn) tmp.rockets.clPow = tmp.fn.gain.plus(1).log10().pow(getRocketEffect()).plus(1);
 	if (!tmp.rockets.onReset) tmp.rockets.onReset = function (prev) {
 		if (modeActive('extreme')) if (tmp.ach[14].has) player.rankCheap = new ExpantaNum(1)
-		tmp.inf.derv.resetDervs();
+		
 	};
 }
