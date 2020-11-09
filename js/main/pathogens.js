@@ -1,6 +1,6 @@
 function updatePathogensGain(){
 	tmp.pathogens.st = new ExpantaNum(1.25);
-	tmp.pathogens.gainLEpart = player.collapse.lifeEssence.plus(1).log10().plus(1).pow(0.1).sub(1);
+	tmp.pathogens.gainLEpart = player.collapse.lifeEssence.plus(1).log10().plus(1).pow(2).sub(1);
 	tmp.pathogens.gainPTHpart = player.pathogens.amount.plus(1).log10().plus(1);
 	tmp.pathogens.gain = tmp.pathogens.gainLEpart.times(tmp.pathogens.gainPTHpart);
 	if (tmp.pathogens.gain.gte(tmp.pathogens.st))
