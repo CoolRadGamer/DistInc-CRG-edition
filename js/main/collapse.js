@@ -1,5 +1,5 @@
 function getCadaverEffSoftcapStart() {
-	let sc = new ExpantaNum(1e12);
+	let sc = new ExpantaNum(1e120);
 	if (modeActive("hard")) sc = sc.div(100);
 	if (modeActive("easy")) sc = sc.times(80);
 	if (tmp.pathogens && player.pathogens.unl) sc = sc.times(tmp.pathogens[10].eff());
@@ -8,7 +8,7 @@ function getCadaverEffSoftcapStart() {
 }
 
 function getCadaverEffSoftcapPower() {
-	let pow = new ExpantaNum(1);
+	let pow = new ExpantaNum(0.5);
 	if (tmp.inf) if (tmp.inf.upgs.has("8;5")) pow = pow.times(0.2);
 	return pow;
 }
@@ -108,7 +108,7 @@ function collapseMile10Eff() {
 }
 
 function getCadaverGainMult() {
-	let mult = new ExpantaNum(1);
+	let mult = new ExpantaNum(20);
 	if (hasCollapseMilestone(5)) mult = mult.times(collapseMile5Eff());
 	if (hasCollapseMilestone(10)) mult = mult.times(collapseMile10Eff());
 	if (tmp.ach[38].has) mult = mult.times(2);
