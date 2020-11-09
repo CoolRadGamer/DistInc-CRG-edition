@@ -92,7 +92,7 @@ function calcDarkCircleBonus(){
 				.plus(1)
 				.pow(
 					ExpantaNum.mul(
-						ExpantaNum.pow(2, player.dc.matter.plus(10).slog(10).sub(1)).div(10),
+						ExpantaNum.pow(2, player.dc.matter.plus(10).sub(1)).div(10),
 						tmp.dc.power
 					)
 				)
@@ -115,7 +115,7 @@ function calcDarkCircleBonus(){
 }
 
 function calcDarkCircleGain(){
-	tmp.dc.dmGain = ExpantaNum.pow(2, player.dc.cores).sub(1).times(player.dc.fluid.plus(1).log10().plus(1)).max(0);
+	tmp.dc.dmGain = ExpantaNum.pow(5, player.dc.cores).sub(1).times(player.dc.fluid.plus(1).log10().plus(1)).max(0);
 	tmp.dc.deGain = player.dc.matter.plus(1).log10();
 	tmp.dc.dfGain = player.dc.energy.plus(1).log10();
 	if (tmp.inf && tmp.inf.upgs.has("8;1")) {
