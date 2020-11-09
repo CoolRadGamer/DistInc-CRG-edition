@@ -267,11 +267,11 @@ function updateTempInfLayer() {
 		infActive = true;
 		let amActive = player.inf.endorsements.eq(9);
 		let message =
-			"The High God <span class='infinity'>Infinity</span> has seen your power, and would like to endorse you" +
-			".<br><button class='btn inf' onclick='tmp.inf.layer.reset(false, false)'>Allow <span class='infinity'>Infinity</span> to endorse you</button>";
+			"The High God <span class='infinity'>Infinity</span> has made you wait for this animation lul" +
+			".<br><button class='btn inf' onclick='tmp.inf.layer.reset(false, false)'>Allow <span class='infinity'>Infinity</span> to shut up</button>";
 		if (amActive)
 			message =
-				"The High God <span class='infinity'>Infinity</span> has admired your prowess, and would like to give you the ability to ascend this world and become a High God yourself.<br><button class='btn inf' onclick='tmp.inf.layer.reset(false, false)'>Allow <span class='infinity'>Infinity</span> to endorse you and turn you into a High God</button>";
+				"The High God <span class='infinity'>Infinity</span> has admired your prowess, and would like to give you the ability to skip this animation lul.<br><button class='btn inf' onclick='tmp.inf.layer.reset(false, false)'>Allow <span class='infinity'>Infinity</span> to shut up forever</button>";
 		showHiddenDiv({
 			color: "orange",
 			title: "You have reached <span class='infinity'>Infinity</span>!",
@@ -616,7 +616,7 @@ function updateTempPantheon() {
 	tmp.inf.pantheon.totalGems = player.inf.pantheon.gems.plus(player.inf.pantheon.angels).plus(player.inf.pantheon.demons);
 	tmp.inf.pantheon.bc = new ExpantaNum(21);
 	if (tmp.inf.upgs.has("5;9")) tmp.inf.pantheon.bc = new ExpantaNum(16);
-	tmp.inf.pantheon.next = tmp.inf.pantheon.totalGems.plus(1).pow(2).plus(tmp.inf.pantheon.bc).sub(1);
+	tmp.inf.pantheon.next = tmp.inf.pantheon.totalGems.plus(1).pow(0.1).plus(tmp.inf.pantheon.bc).sub(1);
 	tmp.inf.pantheon.bulk = player.inf.endorsements.sub(tmp.inf.pantheon.bc).add(1).sqrt().floor();
 	if (scalingActive("spectralGems", tmp.inf.pantheon.totalGems.max(tmp.inf.pantheon.bulk), "scaled")) {
 		let start = getScalingStart("scaled", "spectralGems");
@@ -734,7 +734,7 @@ function updateTempPantheon() {
 }
 
 function updateTempPurge() {
-	tmp.inf.pantheon.purgeMult = new ExpantaNum(1);
+	tmp.inf.pantheon.purgeMult = new ExpantaNum(10);
 	if (tmp.inf.upgs.has("8;2"))
 		tmp.inf.pantheon.purgeMult = tmp.inf.pantheon.purgeMult.times(INF_UPGS.effects["8;2"]()["power"]);
 	if (modeActive("easy")) tmp.inf.pantheon.purgeMult = tmp.inf.pantheon.purgeMult.times(4)
