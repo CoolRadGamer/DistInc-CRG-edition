@@ -38,7 +38,7 @@ function updateTempInfUpgs() {
 		if (!force)
 			if (
 				!confirm(
-					"Warning! Doing this will reset your Infinity Upgrades without giving you anything in return, and will force an Infinity reset! Are you sure you want to do this?"
+					"You screwed up lao"
 				)
 			)
 				return;
@@ -679,7 +679,7 @@ function updateTempPantheon() {
 		if (!player.inf.pantheon.angels.plus(player.inf.pantheon.demons).gt(0)) return;
 		if (
 			!confirm(
-				"Respeccing your Angels & Demons will reset your Angels, Demons, Heavenly Chips, and Demonic Souls, and will perform an Infinity reset. Are you sure you want to do this?"
+				"you screwed up lao 2"
 			)
 		)
 			return;
@@ -901,7 +901,7 @@ function updateTempDerivatives() {
 	tmp.inf.derv.boostMult = tmp.inf.derv.boostMult.pow(tmp.inf.derv.boostPow);
 	if (HCCBA("noDB")) tmp.inf.derv.boostMult = new ExpantaNum(1)
 	if (!tmp.inf.derv.mult) tmp.inf.derv.mult = function (name) {
-		let mult = new ExpantaNum(1);
+		let mult = new ExpantaNum(50);
 		let boosts = player.inf.derivatives.unlocks.sub(tmp.inf.derv.maxShifts).max(0);
 		if (player.elementary.sky.unl && tmp.elm) boosts = boosts.times(tmp.elm.sky.pionEff[7])
 		mult = mult.times(ExpantaNum.pow(tmp.inf.derv.boostMult, boosts));
