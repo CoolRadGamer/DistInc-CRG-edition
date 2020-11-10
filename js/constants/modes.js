@@ -129,7 +129,7 @@ const MODES = {
 			extreme: JSON.parse(JSON.stringify(COMBOS.hikers_dream)),
 		},
 		},
-			"freeranks": {
+			freeranks: {
 		desc: "ranks are FREE",
 		balancing: "broken",
 		balanceCheck: false,
