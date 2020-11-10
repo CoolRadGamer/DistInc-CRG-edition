@@ -195,6 +195,7 @@ function getRankFP() {
 
 function getRankBaseCost() {
 	let bc = new ExpantaNum(1e-10)
+	if (modeActive("freeranks") bc = new ExpantaNum(0)
 	if (modeActive("extreme") && player.rank < 3) bc = bc.times(2)
 	if (modeActive("easy") && player.rank < 3) bc = bc.div(3)
 	if (tmp.inf) if (tmp.inf.stadium.active("spaceon", 5) || tmp.inf.stadium.active("solaris", 6)) bc = bc.times(10)
