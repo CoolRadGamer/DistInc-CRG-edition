@@ -2,7 +2,6 @@ function calcAcceleration(){
 	tmp.acc = new ExpantaNum(1);
 	if (modeActive("hard")) tmp.acc = tmp.acc.div(3);
 	if (modeActive("easy")) tmp.acc = tmp.acc.times(2);
-	if (player.rank.gt(2)) tmp.acc = tmp.acc.times(rank2Eff());
 	if (player.rank.gt(3)) tmp.acc = tmp.acc.times(2);
 	if (player.tier.gt(1) && player.rank.gte(3)) tmp.acc = tmp.acc.times(2);
 	if (player.rank.gt(4)) tmp.acc = tmp.acc.times(rank4Eff());
