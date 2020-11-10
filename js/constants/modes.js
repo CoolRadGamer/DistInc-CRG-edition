@@ -128,6 +128,19 @@ const MODES = {
 			easy: JSON.parse(JSON.stringify(COMBOS.hikers_dream)),
 			extreme: JSON.parse(JSON.stringify(COMBOS.hikers_dream)),
 		},
+			"freeranks": {
+		desc: "ranks are FREE",
+		balancing: "",
+		balanceCheck: false,
+		combos: {
+			hard: JSON.parse(JSON.stringify(COMBOS.hikers_dream)),
+			aau: JSON.parse(JSON.stringify(COMBOS.hikers_dream)),
+			na: JSON.parse(JSON.stringify(COMBOS.hikers_dream)),
+			absurd: JSON.parse(JSON.stringify(COMBOS.absurd)),
+			easy: JSON.parse(JSON.stringify(COMBOS.hikers_dream)),
+			extreme: JSON.parse(JSON.stringify(COMBOS.hikers_dream)),
+		
+		},
 	},
 };
 
