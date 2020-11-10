@@ -130,7 +130,7 @@ const MODES = {
 		},
 			"freeranks": {
 		desc: "ranks are FREE",
-		balancing: "",
+		balancing: "broken",
 		balanceCheck: false,
 		combos: {
 			hard: JSON.parse(JSON.stringify(COMBOS.hikers_dream)),
