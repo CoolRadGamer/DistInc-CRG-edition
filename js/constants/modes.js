@@ -143,7 +143,7 @@ const MODES = {
 		
 		},
 	},
-}
+};
 
 const MODE_VARS = {
 	extreme: {
