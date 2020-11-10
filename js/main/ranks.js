@@ -2,9 +2,13 @@ function updateTempRanks() {
 	if (!tmp.ranks) tmp.ranks = {};
 	let fp = getRankFP()
 	let bc = getRankBaseCost()
+	if (modeActive('freeranks') = false) {
 	tmp.ranks.req = new ExpantaNum(bc).times(
 		ExpantaNum.pow(2, player.rank.div(fp).max(1).sub(1).pow(2))
 	);
+	} else {
+	tmp.ranks.req = 1
+	}
 	tmp.ranks.bulk = player.distance.div(bc).max(1).logBase(2).sqrt().plus(1).times(fp).plus(1).round();
 	if (scalingActive("rank", player.rank.max(tmp.ranks.bulk), "scaled")) {
 		let start = getScalingStart("scaled", "rank");
@@ -195,9 +199,7 @@ function getRankFP() {
 
 function getRankBaseCost() {
 	let bc = new ExpantaNum(1e-10)
-	
 	if (modeActive("extreme") && player.rank < 3) bc = bc.times(2)
-	if (modeActive("freeranks") bc = new ExpantaNum(0)
 	if (tmp.inf) if (tmp.inf.stadium.active("spaceon", 5) || tmp.inf.stadium.active("solaris", 6)) bc = bc.times(10)
 	if (tmp.rankCheap && modeActive("extreme")) bc = bc.div(tmp.rankCheap.eff2).max(1e-100)
 	return bc
