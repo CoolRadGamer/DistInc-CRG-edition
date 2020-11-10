@@ -2,7 +2,7 @@ function updateTempRanks() {
 	if (!tmp.ranks) tmp.ranks = {};
 	let fp = getRankFP()
 	let bc = getRankBaseCost()
-	if (modeActive('freeranks') = false) {
+	if (modeActive('freeranks') == false) {
 	tmp.ranks.req = new ExpantaNum(bc).times(
 		ExpantaNum.pow(2, player.rank.div(fp).max(1).sub(1).pow(2))
 	)
