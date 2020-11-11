@@ -4,12 +4,13 @@ function updateTempRanks() {
 	let bc = getRankBaseCost()
 	if (modeActive('freeranks') == false) {
 	tmp.ranks.req = new ExpantaNum(bc).times(
-		ExpantaNum.pow(2, player.rank.div(fp).max(1).sub(1).pow(2))
+		ExpantaNum.pow(2, player.rank.div(fp).max(1).sub(1).pow(2)))
+		tmp.ranks.bulk = player.distance.div(bc).max(1).logBase(2).sqrt().plus(1).times(fp).plus(1).round();
 	)
 	} else {
 	tmp.ranks.req = 1
 	}
-	tmp.ranks.bulk = player.distance.div(bc).max(1).logBase(2).sqrt().plus(1).times(fp).plus(1).round();
+	
 	
 	if (modeActive('freeranks') == false) {if (scalingActive("rank", player.rank.max(tmp.ranks.bulk), "scaled")) {
 		let start = getScalingStart("scaled", "rank");
