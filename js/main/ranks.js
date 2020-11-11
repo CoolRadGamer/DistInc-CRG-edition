@@ -7,8 +7,8 @@ function updateTempRanks() {
 		ExpantaNum.pow(2, player.rank.div(fp).max(1).sub(1).pow(2)))
 	tmp.ranks.bulk = player.distance.div(bc).max(1).logBase(2).sqrt().plus(1).times(fp).plus(1).round();	
 	} else {
-	tmp.ranks.req = 1
-	tmp.ranks.bulk = 1	
+	tmp.ranks.req = new ExpantaNum(1)
+	tmp.ranks.bulk = new ExpantaNum(1)	
 	}
 	
 	
