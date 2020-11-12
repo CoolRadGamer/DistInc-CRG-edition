@@ -338,10 +338,6 @@ function updateTempInfLayer() {
 	};
 }
 
-function skipInfAnim() {
-	tmp.inf.layer.reset(false, false);
-	if (!showContainer) closeHiddenDiv(true)
-}
 
 function updateTempAscension() {
 	if (!tmp.inf.asc) tmp.inf.asc = {};
