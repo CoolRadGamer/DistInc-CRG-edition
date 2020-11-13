@@ -116,11 +116,7 @@ function getConfidenceOneEffect(){
 }
 
 function updateEnergyLoss(){
-	tmp.hd.energyLoss = tmp.hd.inclineRed.eq(0)?new ExpantaNum(1/0):tmp.hd.inclineRed.pow(getEnergyLossExp())
-	if (player.energyUpgs.includes(2) && tmp.hd.enerUpgs) tmp.hd.energyLoss = tmp.hd.energyLoss.div(tmp.hd.enerUpgs[2])
-	if (modeActive("extreme")){
-		if (tmp.ach) if (tmp.ach[61].has) tmp.hd.energyLoss = tmp.hd.energyLoss.div(Math.max(player.tr.upgrades.length, 1))
-		if (tmp.timeSpeed) if (tmp.timeSpeed.gt(1e20)) tmp.hd.energyLoss = tmp.hd.energyLoss.times(tmp.timeSpeed.log10().div(20))
+	tmp.hd.energyLoss = new ExpamntaNum(0)
 	} 
 }
 
@@ -278,7 +274,7 @@ function refillEnergy() {
 
 function respecEnergyUpgs() {
 	if (player.energyUpgs.length==0) return
-	if (!confirm("Are you sure you want to respec your Energy Upgrades to get your Motive back? This will also perform a Quick Reset.")) return
+	if (!confirm("either you screwed up or you did a reset lao")) return
 	player.spentMotive = new ExpantaNum(0);
 	player.energyUpgs = [];
 	quickReset();
