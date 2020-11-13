@@ -118,7 +118,7 @@ function getConfidenceOneEffect(){
 function updateEnergyLoss(){
 	tmp.hd.energyLoss = new ExpamntaNum(0)
 	} 
-}
+
 
 function calcEnergyUpgrades(){
 	if (!tmp.hd.enerUpgs) tmp.hd.enerUpgs = {}
