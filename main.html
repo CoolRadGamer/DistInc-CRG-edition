@@ -74,7 +74,7 @@
 								smol stuff
 							</button>
 						</td>
-						<td><button><button id="v1.9Endtabbtn" class="btn tb main" onclick="showTab('v1.9End')">Hey you shouldn't be seeing this</button></td>
+						<td><button id="v1.9Endtabbtn" class="btn tb main" onclick="showTab('v1.9End')">Hey you shouldn't be seeing this</button></td>
 					</tr>
 				</table><br>
 			</div>
@@ -117,10 +117,10 @@
 		<div id="options" class="tab" style="display: none;">
 			<table>
 				<tr>
-					<td><button class="btn tb rckt main" onclick="showOptionsTab('saving')">Saving</button></td>
-					<td><button class="btn tb rckt main" onclick="showOptionsTab('modes')">Modes</button></td>
-					<td><button id="ingamebtn" class="btn tb rckt main" onclick="showOptionsTab('ingame')">In-game</button></td>
-					<td><button class="btn tb rckt main" onclick="showOptionsTab('other')">Other</button></td>
+					<td><button class="btn tb gross main" onclick="showOptionsTab('saving')">Saving</button></td>
+					<td><button class="btn tb gross main" onclick="showOptionsTab('modes')">Modes</button></td>
+					<td><button id="ingamebtn" class="btn tb gross main" onclick="showOptionsTab('ingame')">In-game</button></td>
+					<td><button class="btn tb gross main" onclick="showOptionsTab('other')">Other</button></td>
 				</tr>
 			</table>
 			<br /><br />
@@ -926,7 +926,7 @@
 							<button
 								id="perk1"
 								class="btn perk"
-								onclick="tmp.inf.asc.activatePerk(1)"
+								onclick="tmp.inf.asc.activatePerk(3)"
 								style="min-height: 40px !important;"
 							>
 								Dark Perk
@@ -936,7 +936,7 @@
 							<button
 								id="perk2"
 								class="btn perk"
-								onclick="tmp.inf.asc.activatePerk(2)"
+								onclick="tmp.inf.asc.activatePerk(1)"
 								style="min-height: 40px !important;"
 							>
 								Corvid 20 perk
@@ -946,7 +946,7 @@
 							<button
 								id="perk3"
 								class="btn perk"
-								onclick="tmp.inf.asc.activatePerk(3)"
+								onclick="tmp.inf.asc.activatePerk(4)"
 								style="min-height: 40px !important;"
 							>
 								Time Dead Stuff
@@ -956,7 +956,7 @@
 							<button
 								id="perk4"
 								class="btn perk"
-								onclick="tmp.inf.asc.activatePerk(4)"
+								onclick="tmp.inf.asc.activatePerk(2)"
 								style="min-height: 40px !important;"
 							>
 								Ded stonks
@@ -1030,7 +1030,7 @@
 							><br /><br /><span id="spaceonBtm" class="stadiumDesc"></span>
 						</td>
 						<td id="solarisDiv" class="stadiumChall" tooltip="Solaris Challenge Description">
-							<div class="solaris">Sun dude</div><br /><button
+							<div class="solaris">SOLARIS HAS CORONA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</div><br /><button
 								id="solarisChall"
 								class="btn locked"
 								onclick="tmp.inf.stadium.start('solaris')"
@@ -1077,7 +1077,7 @@
 					</tr>
 					<tr id="extremeStadium">
 						<td id="flamisDiv" class="stadiumChall" tooltip="Flamis Challenge Description">
-							<div class="flamis">Flamis</div><br /><button
+							<div class="flamis">Fire Guy</div><br /><button
 								id="flamisChall"
 								class="btn locked"
 								onclick="startExtremeStadium('flamis')"
@@ -1086,7 +1086,7 @@
 							><br /><br /><span id="flamisBtm" class="stadiumDesc"></span>
 						</td>
 						<td id="craniusDiv" class="stadiumChall" tooltip="Cranius Challenge Description">
-							<div class="cranius">Cranius</div><br /><button
+							<div class="cranius">big brain</div><br /><button
 								id="craniusChall"
 								class="btn locked"
 								onclick="startExtremeStadium('cranius')"
@@ -1095,7 +1095,7 @@
 							><br /><br /><span id="craniusBtm" class="stadiumDesc"></span>
 						</td>
 						<td id="spectraDiv" class="stadiumChall" tooltip="Spectra Challenge Description">
-							<div class="spectra">Spectra</div><br /><button
+							<div class="spectra">boo</div><br /><button
 								id="spectraChall"
 								class="btn locked"
 								onclick="startExtremeStadium('spectra')"
@@ -1104,7 +1104,7 @@
 							><br /><br /><span id="spectraBtm" class="stadiumDesc"></span>
 						</td>
 						<td id="aqualonDiv" class="stadiumChall" tooltip="Aqualon Challenge Description">
-							<div class="aqualon">Aqualon</div><br /><button
+							<div class="aqualon">Water Guy</div><br /><button
 								id="aqualonChall"
 								class="btn locked"
 								onclick="startExtremeStadium('aqualon')"
@@ -1113,7 +1113,7 @@
 							><br /><br /><span id="aqualonBtm" class="stadiumDesc"></span>
 						</td>
 						<td id="nullumDiv" class="stadiumChall" tooltip="Nullum Challenge Description">
-							<div class="nullum">Nullum</div><br /><button
+							<div class="nullum">This guy exists</div><br /><button
 								id="nullumChall"
 								class="btn locked"
 								onclick="startExtremeStadium('nullum')"
@@ -1122,7 +1122,7 @@
 							><br /><br /><span id="nullumBtm" class="stadiumDesc"></span>
 						</td>
 						<td id="quantronDiv" class="stadiumChall" tooltip="Quantron Challenge Description">
-							<div class="quantron">Quantron</div><br /><button
+							<div class="quantron">so does this guy</div><br /><button
 								id="quantronChall"
 								class="btn locked"
 								onclick="startExtremeStadium('quantron')"
@@ -1137,7 +1137,7 @@
 				You have <span id="spectralGems" class="spectral"></span> <span id="spectralGemName"></span> Spectral
 				Gems. Next at <span id="nextSpectralGem" class="spectral"></span> Endorsements.<br /><br />
 				<button id="respecSpectralGems" class="btn locked" onclick="tmp.inf.pantheon.respec()">
-					Respec Angels & Demons back into Spectral Gems</button
+					YOU SCREWED UP LAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</button
 				><br /><br />
 				<div style="background-color: #e0ffb5; color: black;">
 					<br /><button id="transferAngels" class="btn locked" onclick="tmp.inf.pantheon.transfer('angels')">
@@ -1196,28 +1196,28 @@
 							</button>
 						</td>
 						<td>
-							<button id="bosonstabbtn" class="btn tb elm main" onclick="tmp.elm.showTab('bosons')">
+							<button id="bosonstabbtn" class="btn tb sky main" onclick="tmp.elm.showTab('bosons')">
 								Bosons
 							</button>
 						</td>
 						<td>
-							<button id="theorytabbtn" class="btn tb th main" onclick="tmp.elm.showTab('theory')">
-								Theories
+							<button id="theorytabbtn" class="btn tb sky main" onclick="tmp.elm.showTab('theory')">
+								pick this and you can't get sky
 							</button>
 						</td>
 						<td>
-							<button id="hctabbtn" class="btn tb hc main" onclick="tmp.elm.showTab('hc')">
+							<button id="hctabbtn" class="btn tb sky main" onclick="tmp.elm.showTab('hc')">
 								Hadronic Challenge
 							</button>
 						</td>
 						<td>
-							<button id="foamtabbtn" class="btn tb foam main" onclick="tmp.elm.showTab('foam')">
-								Quantum Foam
+							<button id="foamtabbtn" class="btn tb sky main" onclick="tmp.elm.showTab('foam')">
+								Quantum FOME
 							</button>
 						</td>
 						<td>
 							<button id="skytabbtn" class="btn tb sky main" onclick="tmp.elm.showTab('sky')">
-								Skyrmions
+								pick this and you can't get strings
 							</button>
 						</td>
 					</tr>
@@ -1953,12 +1953,12 @@
 							</td>
 							<td>
 								<button id="qf1tabbtn" class="btn tb foam" onclick="tmp.elm.qf.showTab('qf1')">
-									Quantum Foam
+									Quantum Fome
 								</button>
 							</td>
 							<td>
 								<button id="entropytabbtn" class="btn tb foam" onclick="tmp.elm.qf.showTab('entropy')">
-									Entropy
+									Eggtropy
 								</button>
 							</td>
 						</tr>
@@ -2002,11 +2002,11 @@
 				<div id="qf1" class="foamTab">
 					<table style="margin: auto; max-width: 80%;">
 						<tr>
-							<td class="foamTextThing">You have <span id="qf1Amt" class="foamtxt"></span> Quantum Foam <span id="qf1Gain"></span>.</td>
-							<td><button id="qf1Boost1" class="btn locked" onclick="qfBoost(1, 1)">Enlarge Quantum Foam by 1m in height<br>Cost: <span id="qf1Cost1" style="color: black !important;"></span> Quantum Foam</button></td>
-							<td><button id="qf1Boost2" class="btn locked" onclick="qfBoost(1, 2)">Enlarge Quantum Foam by 1m in width<br>Cost: <span id="qf1Cost2" style="color: black !important;"></span> Quantum Foam</button></td>
-							<td><button id="qf1Boost3" class="btn locked" onclick="qfBoost(1, 3)">Enlarge Quantum Foam by 1m in depth<br>Cost: <span id="qf1Cost3" style="color: black !important;"></span> Quantum Foam</button></td>
-							<td><button id="qf1NextUnl" class="btn locked" onclick="qfUnl(1)">Unlock a new type of Foam<br>Cost: <span id="qf1Cost4" style="color: black !important;"></span> Quantum Foam</button></td>
+							<td class="foamTextThing">You have <span id="qf1Amt" class="foamtxt"></span> Quantum Fome <span id="qf1Gain"></span>.</td>
+							<td><button id="qf1Boost1" class="btn locked" onclick="qfBoost(1, 1)">Enlarge Quantum Fome by 1m in height<br>Cost: <span id="qf1Cost1" style="color: black !important;"></span> Quantum Foam</button></td>
+							<td><button id="qf1Boost2" class="btn locked" onclick="qfBoost(1, 2)">Enlarge Quantum Fome by 1m in width<br>Cost: <span id="qf1Cost2" style="color: black !important;"></span> Quantum Foam</button></td>
+							<td><button id="qf1Boost3" class="btn locked" onclick="qfBoost(1, 3)">Enlarge Quantum Fome by 1m in depth<br>Cost: <span id="qf1Cost3" style="color: black !important;"></span> Quantum Foam</button></td>
+							<td><button id="qf1NextUnl" class="btn locked" onclick="qfUnl(1)">Unlock a new type of Fome<br>Cost: <span id="qf1Cost4" style="color: black !important;"></span> Quantum Foam</button></td>
 						</tr>
 						<tr>
 							<td></td>
@@ -2024,11 +2024,11 @@
 						<tr height="50"></tr>
 
 						<tr class="qf2row">
-							<td class="foamTextThing">You have <span id="qf2Amt" class="foamtxt"></span> Subplanck Foam <span id="qf2Gain"></span>, which is multiplying Quantum Foam gain by <span id="qf2Eff" class="foamtxt"></span>x.</td>
-							<td><button id="qf2Boost1" class="btn locked" onclick="qfBoost(2, 1)">Enlarge Subplanck Foam by 1m in height<br>Cost: <span id="qf2Cost1" style="color: black !important;"></span> Subplanck Foam</button></td>
-							<td><button id="qf2Boost2" class="btn locked" onclick="qfBoost(2, 2)">Enlarge Subplanck Foam by 1m in width<br>Cost: <span id="qf2Cost2" style="color: black !important;"></span> Subplanck Foam</button></td>
-							<td><button id="qf2Boost3" class="btn locked" onclick="qfBoost(2, 3)">Enlarge Subplanck Foam by 1m in depth<br>Cost: <span id="qf2Cost3" style="color: black !important;"></span> Subplanck Foam</button></td>
-							<td><button id="qf2NextUnl" class="btn locked" onclick="qfUnl(2)">Unlock a new type of Foam<br>Cost: <span id="qf2Cost4" style="color: black !important;"></span> Subplanck Foam</button></td>
+							<td class="foamTextThing">You have <span id="qf2Amt" class="foamtxt"></span> Subplanck Fome <span id="qf2Gain"></span>, which is multiplying Quantum Fome gain by <span id="qf2Eff" class="foamtxt"></span>x.</td>
+							<td><button id="qf2Boost1" class="btn locked" onclick="qfBoost(2, 1)">Enlarge Subplanck Fome by 1m in height<br>Cost: <span id="qf2Cost1" style="color: black !important;"></span> Subplanck Foam</button></td>
+							<td><button id="qf2Boost2" class="btn locked" onclick="qfBoost(2, 2)">Enlarge Subplanck Fome by 1m in width<br>Cost: <span id="qf2Cost2" style="color: black !important;"></span> Subplanck Foam</button></td>
+							<td><button id="qf2Boost3" class="btn locked" onclick="qfBoost(2, 3)">Enlarge Subplanck Fome by 1m in depth<br>Cost: <span id="qf2Cost3" style="color: black !important;"></span> Subplanck Foam</button></td>
+							<td><button id="qf2NextUnl" class="btn locked" onclick="qfUnl(2)">Unlock a new type of Fome<br>Cost: <span id="qf2Cost4" style="color: black !important;"></span> Subplanck Foam</button></td>
 						</tr>
 						<tr class="qf2row">
 							<td></td>
