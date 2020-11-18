@@ -11,7 +11,6 @@ function updateTempDarkCoreCost(){
 	let power3 = getScalingPower("hyper", "darkCore");
 	let base3 = ExpantaNum.pow(1.03, power3);
 
-	let bcMult = modeActive("extreme") ? 0.25 : 10
 
 	let starting 
 	if (scalingActive("darkCore", nAmt, "hyper")) {
@@ -33,9 +32,8 @@ function updateTempDarkCoreCost(){
 				.div(50)
 				.plus(1)
 		)
-	).times(bcMult);
+	).
 	let starting2 = player.collapse.cadavers
-		.div(bcMult)
 		.max(1)
 		.log10()
 		.max(1)
