@@ -10,8 +10,8 @@ function updateTempAuto() {
 			Object.keys(ROBOT_REQS)[i],
 			ROBOT_FL[Object.keys(ROBOT_REQS)[i]]
 		);
-	tmp.auto.intMod = new ExpantaNum(1);
-	tmp.auto.magMod = new ExpantaNum(1);
+	tmp.auto.intMod = new ExpantaNum(10);
+	tmp.auto.magMod = new ExpantaNum(10);
 	if (modeActive("hard")) {
 		tmp.auto.intMod = tmp.auto.intMod.times(2 / 3);
 		tmp.auto.magMod = tmp.auto.magMod.times(2 / 3);
@@ -43,7 +43,7 @@ function getScrapGain() {
 }
 
 function getIntelligenceGain() {
-	let gain = player.rank.plus(1).pow(2).times(player.tier.plus(1)).cbrt().div(1000);
+	let gain = player.rank.plus(1).pow(2).times(player.tier.plus(1)).div(1000);
 	if (player.rank.gt(20)) gain = gain.times(2);
 	if (player.rank.gt(30)) gain = gain.times(3);
 	if (player.tier.gt(4)) gain = gain.times(2);
