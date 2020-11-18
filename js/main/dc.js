@@ -11,7 +11,7 @@ function updateTempDarkCoreCost(){
 	let power3 = getScalingPower("hyper", "darkCore");
 	let base3 = ExpantaNum.pow(1.03, power3);
 
-	let bcMult = modeActive("extreme") ? 0.25 : 10
+	let bcMult = 10
 
 	let starting 
 	if (scalingActive("darkCore", nAmt, "hyper")) {
